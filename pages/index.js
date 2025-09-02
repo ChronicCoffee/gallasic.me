@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -7,21 +9,9 @@ export default function Home() {
         <title>Noah Gallasic - Portfolio</title>
       </Head>
 
-      <header>
-        <nav>
-          <div className="nav-container">
-            <h1 className="logo">Noah Gallasic</h1>
-            <ul className="nav-menu">
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <Header />
 
-      <main>
+      <main className="pt-20">
         <section className="hero">
           <div className="hero-content">
             <h2 className="text-indigo-600 text-5xl font-extrabold">Welcome to My Portfolio</h2>
@@ -93,9 +83,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer>
-        <p>&copy; 2025 Noah Gallasic. All rights reserved.</p>
-      </footer>
+      <Footer />
     </>
   )
 }
