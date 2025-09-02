@@ -33,6 +33,17 @@ jobs:
         run: |
           echo "" > out/.nojekyll
 
+      - name: Debug: list exported files
+        run: |
+          echo "--- out directory tree ---"
+          ls -la out || true
+          echo "--- recurse out/_next ---"
+          ls -la out/_next || true
+          echo "--- css files ---"
+          ls -la out/_next/static/css || true
+          echo "--- head of index.html ---"
+          head -n 40 out/index.html || true
+
       - name: Configure Pages
         uses: actions/configure-pages@v3
 
