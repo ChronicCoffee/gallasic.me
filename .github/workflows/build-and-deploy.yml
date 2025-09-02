@@ -29,6 +29,10 @@ jobs:
           npm run build
           npm run export
 
+      - name: Disable Jekyll for Pages
+        run: |
+          echo "" > out/.nojekyll
+
       - name: Configure Pages
         uses: actions/configure-pages@v3
 
