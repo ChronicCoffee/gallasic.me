@@ -28,7 +28,6 @@ jobs:
         run: |
           npm run build
           npm run export
-
       - name: Disable Jekyll for Pages
         run: |
           echo "" > out/.nojekyll
@@ -44,19 +43,17 @@ jobs:
           echo "--- head of index.html ---"
           head -n 40 out/index.html || true
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-    steps:
-      - name: Deploy to Pages
-        uses: actions/deploy-pages@v1
+      - name: Deploy to gh-pages branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          cd out
+          # configure git
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore(pages): deploy static export from workflow" || true
+          # force push to gh-pages
+          git push --force "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${{ github.repository }}" HEAD:gh-pages
