@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -47,7 +48,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
+          set -euxo pipefail
           cd out
           # configure git
           git init
@@ -55,5 +56,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore(pages): deploy static export from workflow" || true
-          # force push to gh-pages
-          git push --force "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${{ github.repository }}" HEAD:gh-pages
+          echo "--- git status ---"
+          git status --porcelain || true
+          echo "--- git log (last 5) ---"
+          git --no-pager log --oneline -5 || true
+          echo "--- remotes before push ---"
+          git remote -v || true
+          # add remote using x-access-token to avoid actor/token issues
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
+          echo "--- remotes after remote add ---"
+          git remote -v
+          # ensure branch name and force push
+          git branch -M gh-pages || true
+          git push --force origin HEAD:gh-pages
