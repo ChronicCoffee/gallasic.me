@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { cn } from '../lib/utils'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -10,9 +9,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0">
-            <Link href="/">
-              <a className="text-xl font-bold text-gray-800">Noah Gallasic</a>
-            </Link>
+            <Link href="/" className="text-xl font-bold text-gray-800">Noah Gallasic</Link>
           </div>
 
           <nav className="hidden md:flex space-x-6 items-center">
