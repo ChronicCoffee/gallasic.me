@@ -1,0 +1,12 @@
+node_modules/
+.next/
+dist/
+out/
+npm-debug.log
+.DS_Store
+*.log
+/*.env
+/.env.local
+/.env.*.local
+coverage/
+*.tgz
