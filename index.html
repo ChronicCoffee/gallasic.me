@@ -13,110 +13,94 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="nav-container">
-          <h1 class="logo">Noah Gallasic</h1>
-          <ul class="nav-menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+    <header class="bg-gray-900 text-white shadow">
+      <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+        <h1 class="text-2xl font-bold tracking-tight">Noah Gallasic</h1>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-teal-400 transition">About</a></li>
+          <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
+          <li><a href="#skills" class="hover:text-teal-400 transition">Skills</a></li>
+          <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h2>Welcome to My Portfolio</h2>
-          <p>
-            I'm Noah Gallasic, a passionate developer creating amazing digital
-            experiences
-          </p>
-          <a href="#projects" class="cta-button">View My Work</a>
+      <section class="flex flex-col items-center justify-center bg-gradient-to-br from-teal-400 to-blue-500 text-white py-20">
+        <div class="text-center max-w-2xl">
+          <h2 class="text-4xl font-extrabold mb-4">Welcome to My Portfolio</h2>
+          <p class="mb-6 text-lg">I'm Noah Gallasic, a passionate developer creating amazing digital experiences</p>
+          <a href="#projects" class="inline-block bg-white text-teal-600 font-semibold px-6 py-2 rounded shadow hover:bg-teal-100 transition">View My Work</a>
         </div>
       </section>
 
-      <section id="about" class="about">
-        <div class="container">
-          <h2>About Me</h2>
-          <p>
-            I'm Noah Gallasic, a dedicated developer with a passion for creating
-            innovative solutions and beautiful user experiences. Welcome to my
-            portfolio where you can explore my projects and skills.
-          </p>
+      <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+          <h2 class="text-3xl font-bold mb-4 text-gray-800">About Me</h2>
+          <p class="text-gray-600">I'm Noah Gallasic, a dedicated developer with a passion for creating innovative solutions and beautiful user experiences. Welcome to my portfolio where you can explore my projects and skills.</p>
         </div>
       </section>
 
-      <section id="projects" class="projects">
-        <div class="container">
-          <h2>My Projects</h2>
-          <div class="project-grid">
-            <div class="project-card">
-              <h3>Project 1</h3>
-              <p>Description of your first project goes here.</p>
-              <a href="#" class="project-link">View Project</a>
+      <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">My Projects</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-100 rounded-lg shadow p-6 flex flex-col items-start">
+              <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+              <p class="mb-4 text-gray-600">Description of your first project goes here.</p>
+              <a href="#" class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition">View Project</a>
             </div>
-            <div class="project-card">
-              <h3>Project 2</h3>
-              <p>Description of your second project goes here.</p>
-              <a href="#" class="project-link">View Project</a>
+            <div class="bg-gray-100 rounded-lg shadow p-6 flex flex-col items-start">
+              <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+              <p class="mb-4 text-gray-600">Description of your second project goes here.</p>
+              <a href="#" class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition">View Project</a>
             </div>
-            <div class="project-card">
-              <h3>Project 3</h3>
-              <p>Description of your third project goes here.</p>
-              <a href="#" class="project-link">View Project</a>
+            <div class="bg-gray-100 rounded-lg shadow p-6 flex flex-col items-start">
+              <h3 class="text-xl font-semibold mb-2">Project 3</h3>
+              <p class="mb-4 text-gray-600">Description of your third project goes here.</p>
+              <a href="#" class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 transition">View Project</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="skills" class="skills">
-        <div class="container">
-          <h2>Skills</h2>
-          <div class="skills-grid">
-            <div class="skill-item">
-              <h3>Frontend</h3>
-              <p>HTML, CSS, JavaScript, React</p>
+      <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Skills</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold mb-2 text-teal-600">Frontend</h3>
+              <p class="text-gray-600">HTML, CSS, JavaScript, React</p>
             </div>
-            <div class="skill-item">
-              <h3>Backend</h3>
-              <p>Node.js, Python, Database Management</p>
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold mb-2 text-teal-600">Backend</h3>
+              <p class="text-gray-600">Node.js, Python, Database Management</p>
             </div>
-            <div class="skill-item">
-              <h3>Tools</h3>
-              <p>Git, VS Code, Design Software</p>
+            <div class="bg-white rounded-lg shadow p-6">
+              <h3 class="text-xl font-semibold mb-2 text-teal-600">Tools</h3>
+              <p class="text-gray-600">Git, VS Code, Design Software</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <div class="container">
-          <h2>Get In Touch</h2>
-          <p>
-            I'd love to hear from you! Feel free to reach out for collaborations
-            or just to say hello.
-          </p>
-          <div class="contact-info">
-            <a href="mailto:noahgallasic@email.com" class="contact-link"
-              >Email Me</a
-            >
-            <a href="https://github.com/ChronicCoffee" class="contact-link"
-              >GitHub</a
-            >
-            <a href="https://linkedin.com/in/yourprofile" class="contact-link"
-              >LinkedIn</a
-            >
+      <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-2xl text-center">
+          <h2 class="text-3xl font-bold mb-4 text-gray-800">Get In Touch</h2>
+          <p class="mb-6 text-gray-600">I'd love to hear from you! Feel free to reach out for collaborations or just to say hello.</p>
+          <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+            <a href="mailto:noahgallasic@email.com" class="bg-teal-500 text-white px-6 py-2 rounded shadow hover:bg-teal-600 transition">Email Me</a>
+            <a href="https://github.com/ChronicCoffee" class="bg-gray-900 text-white px-6 py-2 rounded shadow hover:bg-gray-800 transition">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" class="bg-blue-600 text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition">LinkedIn</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Noah Gallasic. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-6 mt-12">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Noah Gallasic. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
