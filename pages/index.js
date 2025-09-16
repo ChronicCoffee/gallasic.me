@@ -1,20 +1,10 @@
 
+
+
 import Head from 'next/head';
 import Footer from '../components/Footer';
-import {
-  HeroParallax,
-  NavbarMenu,
-  Cards,
-  FlipWords,
-  Sparkles,
-  StickyScrollReveal,
-  LinkPreview,
-  GithubGlobe,
-  StatefulButton,
-  GlowingStarsEffect,
-  AuroraBackground,
-  GlowingEffect,
-} from 'aceternity-ui';
+import HeroParallax from '../components/HeroParallax';
+import NavbarMenu from '../components/NavbarMenu';
 
 export default function Home() {
   return (
@@ -24,85 +14,83 @@ export default function Home() {
       </Head>
 
       {/* Navbar */}
-      <NavbarMenu
-        logo={<img src="/favicon.ico" alt="Logo" className="w-8 h-8 rounded-full" />}
-        links={[
-          { label: 'About', href: '#about' },
-          { label: 'Projects', href: '#projects' },
-          { label: 'Skills', href: '#skills' },
-          { label: 'Contact', href: '#contact' },
-        ]}
-        className="fixed w-full z-50"
-      />
+      <NavbarMenu />
 
       <main className="pt-24">
         {/* Hero Section */}
-        <HeroParallax
-          title="Welcome to My Portfolio"
-          subtitle={<FlipWords words={["Web Developer", "Designer", "Creator"]} />}
-          description="I'm Noah Gallasic, a passionate developer creating amazing digital experiences."
-          cta={{ label: "View My Work", href: "#projects" }}
-          background={<AuroraBackground />}
-          effect={<GlowingStarsEffect />}
-        />
+        <HeroParallax />
 
         {/* About Section */}
-        <section id="about" className="py-24 bg-gradient-to-br from-gray-900 to-blue-900 relative">
-          <Sparkles>
-            <div className="container mx-auto px-4 max-w-3xl text-center relative z-10">
-              <h2 className="text-4xl font-bold mb-6 text-teal-300">About Me</h2>
-              <p className="text-gray-300 text-lg">I'm Noah Gallasic, a dedicated developer with a passion for creating innovative solutions and beautiful user experiences. Welcome to my portfolio where you can explore my projects and skills.</p>
-            </div>
-          </Sparkles>
+        <section id="about" className="py-24 bg-gradient-to-br from-gray-900 to-blue-900">
+          <div className="container mx-auto px-4 max-w-3xl text-center">
+            <h2 className="text-4xl font-bold mb-6 text-teal-300">About Me</h2>
+            <p className="text-gray-300 text-lg">I'm Noah Gallasic, a dedicated developer with a passion for creating innovative solutions and beautiful user experiences. Welcome to my portfolio where you can explore my projects and skills.</p>
+          </div>
         </section>
 
-        {/* Projects Section */}
-        <section id="projects" className="py-24 bg-gray-950 relative">
-          <StickyScrollReveal>
-            <div className="container mx-auto px-4">
-              <h2 className="text-4xl font-bold mb-10 text-center text-teal-300">My Projects</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <Cards title="Project 1" description="Description of your first project goes here." link={<LinkPreview url="#" />} />
-                <Cards title="Project 2" description="Description of your second project goes here." link={<LinkPreview url="#" />} />
-                <Cards title="Project 3" description="Description of your third project goes here." link={<LinkPreview url="#" />} />
+        {/* Projects Preview Section */}
+        <section id="projects" className="py-24 bg-gray-950">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-10 text-center text-teal-300">My Projects</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <div className="bg-gray-900 rounded-xl shadow-lg p-8 text-left">
+                <h3 className="text-2xl font-semibold mb-2 text-teal-400">Project 1</h3>
+                <p className="mb-4 text-gray-400">Description of your first project goes here.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl shadow-lg p-8 text-left">
+                <h3 className="text-2xl font-semibold mb-2 text-teal-400">Project 2</h3>
+                <p className="mb-4 text-gray-400">Description of your second project goes here.</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl shadow-lg p-8 text-left">
+                <h3 className="text-2xl font-semibold mb-2 text-teal-400">Project 3</h3>
+                <p className="mb-4 text-gray-400">Description of your third project goes here.</p>
               </div>
             </div>
-          </StickyScrollReveal>
+            <div className="text-center mt-8">
+              <a href="/projects" className="inline-block bg-teal-500 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-teal-600 transition font-semibold">See All Projects</a>
+            </div>
+          </div>
         </section>
 
-        {/* Skills Section */}
-        <section id="skills" className="py-24 bg-gradient-to-br from-blue-900 to-teal-900 relative">
+        {/* Skills Preview Section */}
+        <section id="skills" className="py-24 bg-gradient-to-br from-blue-900 to-teal-900">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold mb-10 text-center text-teal-300">Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-              <Cards title="Frontend" description={<FlipWords words={["HTML", "CSS", "JavaScript", "React"]} />} />
-              <Cards title="Backend" description={<FlipWords words={["Node.js", "Python", "Database Management"]} />} />
-              <Cards title="Tools" description={<FlipWords words={["Git", "VS Code", "Design Software"]} />} />
+              <div className="bg-gray-900 rounded-xl shadow-lg p-8 text-left">
+                <h3 className="text-2xl font-semibold mb-2 text-teal-400">Frontend</h3>
+                <p className="text-gray-300">HTML, CSS, JavaScript, React</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl shadow-lg p-8 text-left">
+                <h3 className="text-2xl font-semibold mb-2 text-teal-400">Backend</h3>
+                <p className="text-gray-300">Node.js, Python, Database Management</p>
+              </div>
+              <div className="bg-gray-900 rounded-xl shadow-lg p-8 text-left">
+                <h3 className="text-2xl font-semibold mb-2 text-teal-400">Tools</h3>
+                <p className="text-gray-300">Git, VS Code, Design Software</p>
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <a href="/skills" className="inline-block bg-teal-500 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-teal-600 transition font-semibold">See All Skills</a>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-24 bg-gray-950 relative">
+        <section id="contact" className="py-24 bg-gray-950">
           <div className="container mx-auto px-4 max-w-2xl text-center">
             <h2 className="text-4xl font-bold mb-6 text-teal-300">Get In Touch</h2>
             <p className="mb-8 text-gray-300">I'd love to hear from you! Feel free to reach out for collaborations or just to say hello.</p>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-              <StatefulButton label="Email Me" onClick={() => window.location.href = 'mailto:noahgallasic@email.com'} />
-              <GithubGlobe username="ChronicCoffee" />
+              <a href="mailto:noahgallasic@email.com" className="bg-teal-500 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-teal-600 transition">Email Me</a>
+              <a href="https://github.com/ChronicCoffee" className="bg-gray-900 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-gray-800 transition">GitHub</a>
               <a href="https://linkedin.com/in/yourprofile" className="bg-blue-600 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition">LinkedIn</a>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Footer with Glowing Effect */}
-      <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-teal-900 text-white py-8 mt-24 shadow-inner">
-        <GlowingEffect />
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2025 Noah Gallasic. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
