@@ -1,11 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noah Gallasic - Portfolio</title>
-    <meta name="description" content="Portfolio website of Noah Gallasic - Web Developer and Designer" />
+    <meta
+      name="description"
+      content="Portfolio website of Noah Gallasic - Web Developer and Designer"
+    />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Aceternity UI styles (if needed) -->
@@ -21,39 +23,73 @@
     <div id="aurora-bg"></div>
     <!-- Navbar -->
     <header class="fixed w-full z-50">
-      <nav class="flex items-center justify-between px-8 py-4 bg-gradient-to-r from-gray-900 via-blue-900 to-teal-900 shadow-lg rounded-b-xl">
+      <nav
+        class="flex items-center justify-between px-8 py-4 bg-gradient-to-r from-gray-900 via-blue-900 to-teal-900 shadow-lg rounded-b-xl"
+      >
         <div class="flex items-center gap-3">
           <img src="favicon.ico" alt="Logo" class="w-8 h-8 rounded-full" />
           <span class="text-2xl font-bold tracking-tight">Noah Gallasic</span>
         </div>
         <ul class="flex gap-8 text-lg">
-          <li><a href="#about" class="hover:text-teal-400 transition">About</a></li>
-          <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
-          <li><a href="#skills" class="hover:text-teal-400 transition">Skills</a></li>
-          <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
+          <li>
+            <a href="#about" class="hover:text-teal-400 transition">About</a>
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-teal-400 transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="hover:text-teal-400 transition">Skills</a>
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-teal-400 transition"
+              >Contact</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
     <!-- Hero Section with Parallax, Glowing Stars, and Spotlight -->
-    <section class="relative flex flex-col items-center justify-center h-screen pt-24 overflow-hidden">
+    <section
+      class="relative flex flex-col items-center justify-center h-screen pt-24 overflow-hidden"
+    >
       <div id="hero-parallax"></div>
       <div id="glowing-stars"></div>
       <div id="spotlight"></div>
       <div class="z-10 text-center max-w-2xl mx-auto">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">Welcome to My Portfolio</h1>
+        <h1
+          class="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent"
+        >
+          Welcome to My Portfolio
+        </h1>
         <div id="flip-words" class="text-2xl font-semibold mb-4"></div>
-        <p class="mb-8 text-lg text-gray-200">I'm Noah Gallasic, a passionate developer creating amazing digital experiences.</p>
-        <a href="#projects" class="inline-block bg-teal-500 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-teal-600 transition">View My Work</a>
+        <p class="mb-8 text-lg text-gray-200">
+          I'm Noah Gallasic, a passionate developer creating amazing digital
+          experiences.
+        </p>
+        <a
+          href="#projects"
+          class="inline-block bg-teal-500 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-teal-600 transition"
+          >View My Work</a
+        >
       </div>
     </section>
 
     <!-- About Section with Sparkles -->
-    <section id="about" class="py-24 bg-gradient-to-br from-gray-900 to-blue-900 relative">
+    <section
+      id="about"
+      class="py-24 bg-gradient-to-br from-gray-900 to-blue-900 relative"
+    >
       <div id="sparkles"></div>
       <div class="container mx-auto px-4 max-w-3xl text-center relative z-10">
         <h2 class="text-4xl font-bold mb-6 text-teal-300">About Me</h2>
-        <p class="text-gray-300 text-lg">I'm Noah Gallasic, a dedicated developer with a passion for creating innovative solutions and beautiful user experiences. Welcome to my portfolio where you can explore my projects and skills.</p>
+        <p class="text-gray-300 text-lg">
+          I'm Noah Gallasic, a dedicated developer with a passion for creating
+          innovative solutions and beautiful user experiences. Welcome to my
+          portfolio where you can explore my projects and skills.
+        </p>
       </div>
     </section>
 
@@ -61,35 +97,60 @@
     <section id="projects" class="py-24 bg-gray-950 relative">
       <div id="sticky-scroll-reveal"></div>
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-10 text-center text-teal-300">My Projects</h2>
+        <h2 class="text-4xl font-bold mb-10 text-center text-teal-300">
+          My Projects
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div class="project-card">
             <h3 class="text-2xl font-semibold mb-2">Project 1</h3>
             <div id="link-preview-1"></div>
-            <p class="mb-4 text-gray-400">Description of your first project goes here.</p>
-            <a href="#" class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition">View Project</a>
+            <p class="mb-4 text-gray-400">
+              Description of your first project goes here.
+            </p>
+            <a
+              href="#"
+              class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition"
+              >View Project</a
+            >
           </div>
           <div class="project-card">
             <h3 class="text-2xl font-semibold mb-2">Project 2</h3>
             <div id="link-preview-2"></div>
-            <p class="mb-4 text-gray-400">Description of your second project goes here.</p>
-            <a href="#" class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition">View Project</a>
+            <p class="mb-4 text-gray-400">
+              Description of your second project goes here.
+            </p>
+            <a
+              href="#"
+              class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition"
+              >View Project</a
+            >
           </div>
           <div class="project-card">
             <h3 class="text-2xl font-semibold mb-2">Project 3</h3>
             <div id="link-preview-3"></div>
-            <p class="mb-4 text-gray-400">Description of your third project goes here.</p>
-            <a href="#" class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition">View Project</a>
+            <p class="mb-4 text-gray-400">
+              Description of your third project goes here.
+            </p>
+            <a
+              href="#"
+              class="mt-auto inline-block bg-teal-500 text-white px-4 py-2 rounded-xl hover:bg-teal-600 transition"
+              >View Project</a
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section with Flip Words and SVG Mask Effect -->
-    <section id="skills" class="py-24 bg-gradient-to-br from-blue-900 to-teal-900 relative">
+    <section
+      id="skills"
+      class="py-24 bg-gradient-to-br from-blue-900 to-teal-900 relative"
+    >
       <div id="svg-mask-effect"></div>
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-10 text-center text-teal-300">Skills</h2>
+        <h2 class="text-4xl font-bold mb-10 text-center text-teal-300">
+          Skills
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div class="bg-gray-900 rounded-xl shadow-lg p-8">
             <h3 class="text-2xl font-semibold mb-2 text-teal-400">Frontend</h3>
@@ -115,17 +176,37 @@
       <div id="github-globe"></div>
       <div class="container mx-auto px-4 max-w-2xl text-center">
         <h2 class="text-4xl font-bold mb-6 text-teal-300">Get In Touch</h2>
-        <p class="mb-8 text-gray-300">I'd love to hear from you! Feel free to reach out for collaborations or just to say hello.</p>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-          <button id="stateful-button" class="bg-teal-500 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-teal-600 transition">Email Me</button>
-          <a href="https://github.com/ChronicCoffee" class="bg-gray-900 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-gray-800 transition">GitHub</a>
-          <a href="https://linkedin.com/in/yourprofile" class="bg-blue-600 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition">LinkedIn</a>
+        <p class="mb-8 text-gray-300">
+          I'd love to hear from you! Feel free to reach out for collaborations
+          or just to say hello.
+        </p>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-8"
+        >
+          <button
+            id="stateful-button"
+            class="bg-teal-500 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-teal-600 transition"
+          >
+            Email Me
+          </button>
+          <a
+            href="https://github.com/ChronicCoffee"
+            class="bg-gray-900 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-gray-800 transition"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            class="bg-blue-600 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition"
+            >LinkedIn</a
+          >
         </div>
       </div>
     </section>
 
     <!-- Footer with Glowing Effect -->
-    <footer class="bg-gradient-to-r from-gray-900 via-blue-900 to-teal-900 text-white py-8 mt-24 shadow-inner">
+    <footer
+      class="bg-gradient-to-r from-gray-900 via-blue-900 to-teal-900 text-white py-8 mt-24 shadow-inner"
+    >
       <div id="glowing-effect"></div>
       <div class="container mx-auto px-4 text-center">
         <p>&copy; 2025 Noah Gallasic. All rights reserved.</p>

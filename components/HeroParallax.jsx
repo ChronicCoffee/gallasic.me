@@ -17,7 +17,8 @@ export default function HeroParallax() {
           Welcome to My Portfolio
         </h1>
         <p className="mb-8 text-lg text-white">
-          I'm Noah Gallasic, a passionate developer creating amazing digital experiences.
+          I'm Noah Gallasic, a passionate developer creating amazing digital
+          experiences.
         </p>
         <a
           href="#projects"
